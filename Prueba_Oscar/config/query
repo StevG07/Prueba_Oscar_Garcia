@@ -1,0 +1,21 @@
+create database cafeteria;
+
+create table productos(
+id int(255) auto_increment not null,
+nombre_producto varchar(100) not null,
+referencia varchar(255) not null,
+precio int(255) not null,
+peso int(255) not null,
+categoria varchar(100) not null,
+stock int(255) not null,
+fecha_creacion date not null,
+constraint primary KEY(id)
+);
+
+create table ventas(
+id int(255) auto_increment not null,
+id_producto int(255) not null,    
+nombre_producto varchar(100) not null,
+cantidad_vendida int(255) not null,
+constraint primary KEY(id)
+);
